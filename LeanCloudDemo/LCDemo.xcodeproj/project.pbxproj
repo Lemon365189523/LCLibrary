@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3313AF6023911EDD00D11634 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313AF5F23911EDD00D11634 /* AddArticleViewController.swift */; };
 		331668C22385270B005DA12C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331668C12385270B005DA12C /* RegisterViewController.swift */; };
 		331668C423852C07005DA12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331668C323852C07005DA12C /* Main.storyboard */; };
 		331668C623852CFB005DA12C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331668C523852CFB005DA12C /* HomeViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		05A684A2B452C816F5F260CB /* Pods_LCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3313AF5F23911EDD00D11634 /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
 		331668C12385270B005DA12C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		331668C323852C07005DA12C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		331668C523852CFB005DA12C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				331668C723852D84005DA12C /* HomeTableViewCell.swift */,
 				331668CC23853606005DA12C /* UserTableViewController.swift */,
 				331668D3238538E3005DA12C /* EditDataViewController.swift */,
+				3313AF5F23911EDD00D11634 /* AddArticleViewController.swift */,
 				3326CDCE238523EA00A48512 /* Login.storyboard */,
 				331668C323852C07005DA12C /* Main.storyboard */,
 				3326CDD1238523EB00A48512 /* Assets.xcassets */,
@@ -248,6 +251,7 @@
 				331668D2238538D4005DA12C /* ImageRow.swift in Sources */,
 				331668CD23853606005DA12C /* UserTableViewController.swift in Sources */,
 				331668C22385270B005DA12C /* RegisterViewController.swift in Sources */,
+				3313AF6023911EDD00D11634 /* AddArticleViewController.swift in Sources */,
 				331668C623852CFB005DA12C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

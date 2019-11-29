@@ -128,17 +128,17 @@
             </objects>
             <point key="canvasLocation" x="-30.434782608695656" y="95.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--添加文章-->
         <scene sceneID="oAi-X1-qWl">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="xBt-Fa-kvZ" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="xBt-Fa-kvZ" customClass="AddArticleViewController" customModule="LCDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4r0-jT-kBy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="PnI-fe-ic5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ohz-Fe-uXI"/>
+                    <navigationItem key="navigationItem" title="添加文章" id="ohz-Fe-uXI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YO9-ve-Oj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
