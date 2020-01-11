@@ -11,7 +11,7 @@ import SwiftyUserDefaults
 import LeanCloud
 
 extension DefaultsKeys {
-    static let tokenKey = DefaultsKey<String>("user_token", defaultValue: "")
+    var tokenKey : DefaultsKey<String> { return .init("user_token", defaultValue: "") }
 }
 
 
@@ -21,10 +21,10 @@ class User {
     
     var token : String {
         get {
-            return Defaults[.tokenKey]
+            return Defaults[\.tokenKey]
         }
         set {
-            Defaults[.tokenKey] = newValue
+            Defaults[\.tokenKey] = newValue
         }
     }
     

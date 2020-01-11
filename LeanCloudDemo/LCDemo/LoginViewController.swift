@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let object):
                 User.current.token = object.sessionToken?.value ?? ""
+                User.current.info = object
                 print("登录成功")
                 let home = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
                 let keyWindow = UIApplication.shared.keyWindow

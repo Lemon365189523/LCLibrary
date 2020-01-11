@@ -10,5 +10,8 @@ target 'LCDemo' do
   pod 'LeanCloud'
   pod 'SwiftyUserDefaults'
   pod 'Eureka' , '~>4.3.0'
-
+  pod 'Kingfisher'
+  pod 'YPImagePicker'
+  pod 'SKPhotoBrowser'
+  
 end

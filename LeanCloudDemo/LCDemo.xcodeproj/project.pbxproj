@@ -22,6 +22,8 @@
 		3326CDD5238523EB00A48512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3326CDD3238523EB00A48512 /* LaunchScreen.storyboard */; };
 		3326CDDE238524FD00A48512 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3326CDDD238524FD00A48512 /* LoginViewController.swift */; };
 		4FF918BA08E119365FE6F306 /* Pods_LCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A684A2B452C816F5F260CB /* Pods_LCDemo.framework */; };
+		8F54994523C97B8700C4EED9 /* AddTrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F54994423C97B8700C4EED9 /* AddTrendsViewController.swift */; };
+		8F54994723C9A40A00C4EED9 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F54994623C9A40A00C4EED9 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		3326CDD4238523EB00A48512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3326CDD6238523EB00A48512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3326CDDD238524FD00A48512 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8F54994423C97B8700C4EED9 /* AddTrendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrendsViewController.swift; sourceTree = "<group>"; };
+		8F54994623C9A40A00C4EED9 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		975CD4F7FFB4A71AD6314FFC /* Pods-LCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCDemo.debug.xcconfig"; path = "Target Support Files/Pods-LCDemo/Pods-LCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		CBB67ABE4A2516A914C9C1D7 /* Pods-LCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCDemo.release.xcconfig"; path = "Target Support Files/Pods-LCDemo/Pods-LCDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +110,8 @@
 				331668C723852D84005DA12C /* HomeTableViewCell.swift */,
 				331668CC23853606005DA12C /* UserTableViewController.swift */,
 				331668D3238538E3005DA12C /* EditDataViewController.swift */,
+				8F54994423C97B8700C4EED9 /* AddTrendsViewController.swift */,
+				8F54994623C9A40A00C4EED9 /* ImageCollectionViewCell.swift */,
 				3326CDCE238523EA00A48512 /* Login.storyboard */,
 				331668C323852C07005DA12C /* Main.storyboard */,
 				3326CDD1238523EB00A48512 /* Assets.xcassets */,
@@ -245,10 +251,12 @@
 				331668D4238538E3005DA12C /* EditDataViewController.swift in Sources */,
 				331668D1238538D4005DA12C /* ImagePickerController.swift in Sources */,
 				3326CDC9238523EA00A48512 /* AppDelegate.swift in Sources */,
+				8F54994723C9A40A00C4EED9 /* ImageCollectionViewCell.swift in Sources */,
 				331668D2238538D4005DA12C /* ImageRow.swift in Sources */,
 				331668CD23853606005DA12C /* UserTableViewController.swift in Sources */,
 				331668C22385270B005DA12C /* RegisterViewController.swift in Sources */,
 				331668C623852CFB005DA12C /* HomeViewController.swift in Sources */,
+				8F54994523C97B8700C4EED9 /* AddTrendsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
