@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -132,69 +131,11 @@
         <!--添加动态-->
         <scene sceneID="oAi-X1-qWl">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="xBt-Fa-kvZ" customClass="AddTrendsViewController" customModule="LCDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="xBt-Fa-kvZ" customClass="AddArticleViewController" customModule="LCDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4r0-jT-kBy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zQW-Y6-r3r">
-                                <rect key="frame" x="16" y="108" width="382" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="HQl-df-Kk7"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7QS-OS-9Tz">
-                                <rect key="frame" x="16" y="278" width="382" height="250"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Lgl-EL-aEi"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wit-XS-meZ">
-                                    <size key="itemSize" width="123" height="122"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="6LB-7n-Uww" customClass="ImageCollectionViewCell" customModule="LCDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="123" height="122"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qyD-ra-XzP">
-                                            <rect key="frame" x="0.0" y="0.0" width="123" height="122"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtz-38-kvg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="123" height="122"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="xtz-38-kvg" secondAttribute="trailing" id="3ZC-su-xbe"/>
-                                                <constraint firstItem="xtz-38-kvg" firstAttribute="leading" secondItem="qyD-ra-XzP" secondAttribute="leading" id="LgR-Dw-biz"/>
-                                                <constraint firstAttribute="bottom" secondItem="xtz-38-kvg" secondAttribute="bottom" id="MIh-Uy-geF"/>
-                                                <constraint firstItem="xtz-38-kvg" firstAttribute="top" secondItem="qyD-ra-XzP" secondAttribute="top" id="hkF-BF-ZqG"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="123" height="122"/>
-                                        <connections>
-                                            <outlet property="imageView" destination="xtz-38-kvg" id="rzm-Hr-vhx"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="PnI-fe-ic5" firstAttribute="trailing" secondItem="zQW-Y6-r3r" secondAttribute="trailing" constant="16" id="9xC-JD-uyk"/>
-                            <constraint firstItem="7QS-OS-9Tz" firstAttribute="leading" secondItem="PnI-fe-ic5" secondAttribute="leading" constant="16" id="ATZ-sj-1p7"/>
-                            <constraint firstItem="7QS-OS-9Tz" firstAttribute="top" secondItem="zQW-Y6-r3r" secondAttribute="bottom" constant="20" id="SsM-7H-Sdv"/>
-                            <constraint firstItem="zQW-Y6-r3r" firstAttribute="top" secondItem="PnI-fe-ic5" secondAttribute="top" constant="20" id="lua-oH-CDv"/>
-                            <constraint firstItem="zQW-Y6-r3r" firstAttribute="leading" secondItem="PnI-fe-ic5" secondAttribute="leading" constant="16" id="qfd-gr-b1E"/>
-                            <constraint firstItem="PnI-fe-ic5" firstAttribute="trailing" secondItem="7QS-OS-9Tz" secondAttribute="trailing" constant="16" id="wdL-zH-xI2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PnI-fe-ic5"/>
                     </view>
                     <navigationItem key="navigationItem" title="添加动态" id="ohz-Fe-uXI">
@@ -204,10 +145,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="imagesCollectionView" destination="7QS-OS-9Tz" id="mQt-26-yGL"/>
-                        <outlet property="inputTextView" destination="zQW-Y6-r3r" id="Euz-0T-n7x"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YO9-ve-Oj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
