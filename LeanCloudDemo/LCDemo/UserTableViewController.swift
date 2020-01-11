@@ -35,11 +35,7 @@ class UserTableViewController: UITableViewController {
         
         
         DispatchQueue.global().async {
-            guard let file = user.get("avatar") as? LCFile ,
-                let urlPath = file.url?.stringValue ,
-                let url = URL(string: urlPath),
-                let data = try? Data(contentsOf: url),
-                let image = UIImage(data: data)else {
+            guard let image = User.current.avatar else {
                 return
             }
             

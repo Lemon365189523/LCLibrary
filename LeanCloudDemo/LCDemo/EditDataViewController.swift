@@ -36,11 +36,12 @@ class EditDataViewController: FormViewController {
         }
 //        tableView.backgroundColor = .white
         tableView.separatorStyle = .none
+
     
         form
             +++ ImageRow() {[unowned self] row in
                 row.title = "选择头像"
-                row.value = UIImage(named: "avatar")
+                row.value = User.current.avatar
                 if self.info.avatarData != nil {
                     row.value = UIImage(data: self.info.avatarData!)
                 }
@@ -52,7 +53,7 @@ class EditDataViewController: FormViewController {
             <<< TextRow(){[unowned self] in
                 $0.title = "昵称"
                 $0.placeholder = "请输入"
-                $0.value = self.info.nickname
+                $0.value = User.current.nickname
                 $0.onChange { (row) in
                     let nickname = row.value ?? ""
                     self.info.nickname = nickname
@@ -60,7 +61,7 @@ class EditDataViewController: FormViewController {
             }
             <<< DateRow(){[unowned self] in
                 $0.title = "生日"
-                $0.value = self.info.birthDay
+                $0.value = User.current.birthDay
                 $0.onChange { (row) in
                     self.info.birthDay = row.value
                 }
@@ -68,6 +69,7 @@ class EditDataViewController: FormViewController {
             +++ Section("签名")
             <<< TextAreaRow(){ [unowned self] in
                 $0.placeholder = "请输入"
+                $0.value = User.current.signature
                 $0.onChange { (row) in
                     let sign = row.value ?? ""
                     self.info.signature = sign
