@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch result {
                 case .success(object: let user):
                     // 登录成功
-                    User.current.info = user
+//                    User.current.info = user
                     let home = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
                     self?.window?.rootViewController = home
                     print(user)

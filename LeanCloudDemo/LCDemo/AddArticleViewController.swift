@@ -59,13 +59,10 @@ class AddArticleViewController: FormViewController {
     
     func save(_ title : String , content : String , image : UIImage?){
     
-        
-        
         do {
             let article = LCObject(className: "Articles")
             try article.set("title", value: title)
             try article.set("content", value: content)
-            try article.set("date",value: Date())
             try article.set("author", value: User.current.info!)
             
             if let data = image?.jpegData(compressionQuality: 0.1) {
@@ -75,7 +72,22 @@ class AddArticleViewController: FormViewController {
                     switch result {
                     case .success:
                         print("文件保存完成。objectId：" + (file.objectId?.value ?? ""))
-//                        self?.saveInfo(file)
+                        //保存图片
+                        try? article.set("images", value: file)
+                        try? article.set("date",value: Date())
+                        article.save {[weak article] (result) in
+                            switch result {
+                                
+                            case .success:
+                                print(article?.objectId?.value ?? "没有id")
+                                print("保存成功")
+                                self?.navigationController?.popViewController(animated: true)
+                            case .failure(let error):
+                                print(error)
+                                
+                            }
+                        }
+                        
                     case .failure(error: let error):
                         // 保存失败，可能是文件无法被读取，或者上传过程中出现问题
                         print(error)
@@ -83,23 +95,18 @@ class AddArticleViewController: FormViewController {
                 }
                 
             }else{
-                
+                print("图片出错")
             }
             
             
-            article.save {[weak article] (result) in
-                switch result {
-                    
-                case .success:
-                    print(article?.objectId?.value ?? "没有id")
-                case .failure(let error):
-                    print(error)
-                    
-                }
-            }
         }catch {
             print(error)
         }
+        
+    }
+    
+    ///上传多张照片
+    func uploadImages(images: [UIImage] , completion: @escaping ([String]) -> Void){
         
     }
 }

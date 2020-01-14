@@ -9,7 +9,7 @@
 import UIKit
 import LeanCloud
 
-let kCommunityForum = "CommunityForum"
+let kArticles = "Articles"
 
 class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
@@ -21,9 +21,10 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var collectButton: UIButton!
 
+    @IBOutlet weak var coverImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,12 +33,6 @@ class HomeTableViewCell: UITableViewCell {
         
     }
     
-    func requestData(){
-        
-//        let query = LCQuery(className: kCommunityForum)
-        
-        
-        
-    }
+
 
 }

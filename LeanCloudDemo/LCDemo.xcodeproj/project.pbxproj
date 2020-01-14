@@ -22,6 +22,7 @@
 		3326CDD5238523EB00A48512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3326CDD3238523EB00A48512 /* LaunchScreen.storyboard */; };
 		3326CDDE238524FD00A48512 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3326CDDD238524FD00A48512 /* LoginViewController.swift */; };
 		4FF918BA08E119365FE6F306 /* Pods_LCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A684A2B452C816F5F260CB /* Pods_LCDemo.framework */; };
+		8F365AE323CDA8570003647B /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F365AE223CDA8570003647B /* ArticleModel.swift */; };
 		8F54994A23C9A5DB00C4EED9 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F54994923C9A5DB00C4EED9 /* AddArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		3326CDD4238523EB00A48512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3326CDD6238523EB00A48512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3326CDDD238524FD00A48512 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8F365AE223CDA8570003647B /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		8F54994923C9A5DB00C4EED9 /* AddArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
 		975CD4F7FFB4A71AD6314FFC /* Pods-LCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCDemo.debug.xcconfig"; path = "Target Support Files/Pods-LCDemo/Pods-LCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		CBB67ABE4A2516A914C9C1D7 /* Pods-LCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCDemo.release.xcconfig"; path = "Target Support Files/Pods-LCDemo/Pods-LCDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		3326CDC7238523EA00A48512 /* LCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8F365AE123CDA83A0003647B /* Model */,
 				331668CE238538D4005DA12C /* View */,
 				3326CDC8238523EA00A48512 /* AppDelegate.swift */,
 				331668CA238532DD005DA12C /* User.swift */,
@@ -126,6 +129,14 @@
 				05A684A2B452C816F5F260CB /* Pods_LCDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F365AE123CDA83A0003647B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F365AE223CDA8570003647B /* ArticleModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8F54994823C9A59A00C4EED9 /* Recovered References */ = {
@@ -262,6 +273,7 @@
 				331668D2238538D4005DA12C /* ImageRow.swift in Sources */,
 				331668CD23853606005DA12C /* UserTableViewController.swift in Sources */,
 				331668C22385270B005DA12C /* RegisterViewController.swift in Sources */,
+				8F365AE323CDA8570003647B /* ArticleModel.swift in Sources */,
 				331668C623852CFB005DA12C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

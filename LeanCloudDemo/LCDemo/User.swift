@@ -55,7 +55,9 @@ class User {
         return info?.get("birthDay")?.dateValue
     }
     
-    var info : LCUser?
+    var info : LCUser? {
+        return LCApplication.default.currentUser
+    }
     
 
 }
