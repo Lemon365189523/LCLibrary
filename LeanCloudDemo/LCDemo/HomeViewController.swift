@@ -28,7 +28,8 @@ class HomeViewController: UITableViewController {
     func reloadData(){
         
         let query = LCQuery(className: "Articles")
-        query.whereKey("createdAt", .ascending)
+        query.whereKey("createdAt", .descending)
+        query.whereKey("author", .equalTo(User.current.info!))
         _ = query.find(completion: {[unowned self] (result) in
             
             switch result {
@@ -55,9 +56,31 @@ class HomeViewController: UITableViewController {
         cell.dateLabel.text = model.date
         cell.avatarImageView.kf.setImage(with: URL(string: model.avatar))
         cell.nameLabel.text = model.name
+        cell.commentButton.tag = indexPath.row
+        cell.commentButton.addTarget(self, action: #selector(addComment), for: .touchUpInside)
         return cell
     }
     
     
+    @objc func addComment(button : UIButton){
+        
+        let index = button.tag
+        let obj = datas[index].object
+        
+        do {
+            // 创建 comment
+            let comment = LCObject(className: "Comment")
+            try comment.set("content", value: Date().description)
+            try comment.set("user", value: User.current.info!)
+            // 将 post 设为 comment 的一个属性值
+            try comment.set("parent", value: obj)
 
+            // 保存 comment 会同时保存 post
+            assert(comment.save().isSuccess)
+            print("评论完成")
+        } catch {
+            print(error)
+        }
+
+    }
 }

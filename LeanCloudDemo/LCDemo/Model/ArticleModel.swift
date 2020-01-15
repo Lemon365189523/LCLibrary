@@ -18,8 +18,10 @@ class ArticleModel {
     var name : String = ""
     var avatar : String = ""
     var id : String
+    var object : LCObject
     
     init(obj: LCObject) {
+        object = obj
         id = obj.objectId?.stringValue ?? ""
         title = obj.get("title")?.stringValue ?? ""
         content = obj.get("content")?.stringValue ?? ""
@@ -33,8 +35,9 @@ class ArticleModel {
         
         date = obj.get("date")?.dateValue?.description ?? ""
         
-        let user = obj.get("author")
-        print(user)
+        let user = obj.get("author") as? LCUser
+        print(user?.get("nickname")?.stringValue)
+//        print(user?.username)
 //        name = user?.username?.value ?? ""
 //
 //        if let file = user?.get("avatar") as? LCFile ,

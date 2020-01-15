@@ -63,6 +63,7 @@ class AddArticleViewController: FormViewController {
             let article = LCObject(className: "Articles")
             try article.set("title", value: title)
             try article.set("content", value: content)
+            // 不能获取用户信息 只能单独出来
             try article.set("author", value: User.current.info!)
             
             if let data = image?.jpegData(compressionQuality: 0.1) {

@@ -253,7 +253,13 @@
                             <outlet property="delegate" destination="wC9-Fm-CS0" id="fUk-Ra-w14"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="我的" id="eRH-OX-TWr"/>
+                    <navigationItem key="navigationItem" title="我的" id="eRH-OX-TWr">
+                        <barButtonItem key="rightBarButtonItem" title="退出登录" id="s57-UN-UMf">
+                            <connections>
+                                <action selector="clickLogout:" destination="wC9-Fm-CS0" id="olk-i8-OIg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="avatarImageView" destination="JmM-N0-6J3" id="jAh-bL-1tj"/>
                         <outlet property="descLabel" destination="viC-vt-c0T" id="68c-z4-dgH"/>

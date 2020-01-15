@@ -49,5 +49,12 @@ class UserTableViewController: UITableViewController {
         
     }
 
-
+    @IBAction func clickLogout(_ sender: Any) {
+        
+        LCUser.logOut(application: LCApplication.default)
+        
+        let login = UIStoryboard.init(name: "Login", bundle: nil).instantiateInitialViewController()
+        UIApplication.shared.keyWindow?.rootViewController = login
+    }
+    
 }

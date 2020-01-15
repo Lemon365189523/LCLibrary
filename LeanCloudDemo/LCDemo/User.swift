@@ -59,7 +59,6 @@ class User {
         return LCApplication.default.currentUser
     }
     
-
 }
 
 /*
